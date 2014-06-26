@@ -1,14 +1,38 @@
 # Data structures in Ruby
 
-Add basic setup here.
+This is a place where students can begin to learn the basics of 
+data structure written in Ruby.
 
-## Examples
+It is based off the "[Algorithms, 4th Edition website](http://algs4.cs.princeton.edu/)".
 
-Show concrete examples
+## Mission
+
+Implement the queue and the stack abstract data types in Ruby based on the code
+for that was implemented for the Bag ADT in class. Use good test driven development
+flow to help with the development of these data structures.
+
+For the queue, you will implement the following methods:
+
+* constructor that takes no arguments and creates an empty Queue
+* enqueue(item) - adds an item to the front queue
+* dequeue - returns the item at the end of the queue
+* empty? - tells you if the queue is empty or not
+* size - tells you how many items are in the queue
+
+For the stack, you will implement the following methods:
+
+* constructor that takes no arguments and creates an empty Queue
+* push(item) - adds an item to the front queue
+* pop - returns the item at the end of the queue
+* empty? - tells you if the queue is empty or not
+* size - tells you how many items are in the queue
 
 # Extra
 
-Add extra challenges here.
+Implement an each method for each data structure above. This method takes a block
+as the only parameter. This method yields the items in the data structure in the order
+defined by the data structure. For a queue, this is First In, First Out and for a
+stack, this is Last In, First Out.
 
 # Setup
 
