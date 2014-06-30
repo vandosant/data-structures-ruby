@@ -29,10 +29,16 @@ For the stack, you will implement the following methods:
 
 # Extra
 
+## Each
+
 Implement an each method for each data structure above. This method takes a block
 as the only parameter. This method yields the items in the data structure in the order
 defined by the data structure. For a queue, this is First In, First Out and for a
 stack, this is Last In, First Out.
+
+## Not using arrays
+
+If you implemented these data structures using an array internally, re-implement without using an array internally.
 
 # Setup
 
