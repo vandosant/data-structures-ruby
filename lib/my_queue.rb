@@ -1,28 +1,44 @@
+require './lib/node'
+
 class MyQueue
   def initialize
-    @empty = true
-    @items = []
+    @head = nil
+    @tail = nil
+    @size = 0
   end
 
   def empty?
-    size == 0
+    @head == nil && @tail == nil
   end
 
   def size
-    @items.length
+    @size
   end
 
   def enqueue(item)
-    @items << item
+    node = Node.new(item)
+    if @head.nil?
+      @head = node
+      @tail= node
+    else
+      @tail.next = node
+      @tail = node
+    end
+    @size += 1
   end
 
   def dequeue
-    @items.delete_at(0)
+    result = @head.item
+    @head = @head.next
+    @size -= 1
+    result
   end
 
   def each
-    @items.each do |item|
-      yield item
+    current = @head
+    while current
+      yield current.item
+      current = current.next
     end
   end
 end
