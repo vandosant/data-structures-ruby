@@ -26,7 +26,7 @@ describe Queue do
       result << item
     end
 
-    expect(result).to eq ["A thing", "Another thing", "Another thing", "Anything"]
+    expect(result).to eq ["Anything", "Another thing", "Another thing", "A thing"]
   end
 
   it "returns the last item in the queue" do
@@ -35,6 +35,7 @@ describe Queue do
     queue.enqueue("Another thing")
     queue.enqueue("A thing")
 
-    expect(queue.dequeue).to eq "A thing"
+    expect(queue.dequeue).to eq "Anything"
+    expect(queue.dequeue).to eq "Another thing"
   end
 end

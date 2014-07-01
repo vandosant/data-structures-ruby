@@ -1,28 +1,23 @@
 class Queue
   def initialize
     @empty = true
-    @size = 0
     @items = []
   end
 
   def empty?
-    @size == 0
+    size == 0
   end
 
   def size
-    @size
+    @items.length
   end
 
   def enqueue(item)
-    @items.reverse!
     @items << item
-    @items.reverse!
-
-    @size += 1
   end
 
   def dequeue
-    @items[0]
+    @items.delete_at(0)
   end
 
   def each
