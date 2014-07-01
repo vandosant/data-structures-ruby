@@ -1,4 +1,4 @@
-class Queue
+class MyQueue
   def initialize
     @empty = true
     @items = []

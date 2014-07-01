@@ -1,7 +1,7 @@
-require_relative '../lib/queue'
+require_relative '../lib/my_queue'
 
-describe Queue do
-  let(:queue) { Queue.new }
+describe MyQueue do
+  let(:queue) { MyQueue.new }
 
   it 'creates an empty queue' do
     expect(queue.empty?).to eq true
